@@ -7,4 +7,4 @@ Features:
 - Decision support recommendation
 - Built with Electron + WeatherAPI
 
-Student: Ferry
+name: Ferry
