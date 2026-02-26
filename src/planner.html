@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Planner (CRUD)</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body class="ios">
+  <header class="iosTop">
+    <div>
+      <div class="brand">WeatherApp</div>
+      <div class="subtitle">Activity Planner (CRUD)</div>
+    </div>
+    <nav class="nav">
+    <a class="navlink" href="./index.html"
+      onclick="sessionStorage.setItem('fromPlanner','1')">Dashboard</a>
+      <a class="navlink active" href="./planner.html">Planner (CRUD)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="glass">
+      <div class="sectionTitle">Add / Update Activity</div>
+
+      <div class="dsGrid">
+        <div>
+          <input class="iosInput" id="name" placeholder="Activity name (e.g. Jogging)" />
+          <select class="iosInput" id="type">
+            <option value="Outdoor">Outdoor</option>
+            <option value="Indoor">Indoor</option>
+          </select>
+          <input class="iosInput" id="note" placeholder="Note (optional)" />
+        </div>
+
+        <div>
+          <input class="iosInput" id="minTemp" type="number" placeholder="Min Temp (°C) e.g. 24" />
+          <input class="iosInput" id="maxTemp" type="number" placeholder="Max Temp (°C) e.g. 33" />
+          <select class="iosInput" id="rainAllowed">
+            <option value="No">No Rain</option>
+            <option value="Yes">Rain OK</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:10px;">
+        <button class="iosBtn" id="btnAdd">Add</button>
+        <button class="iosBtn" id="btnUpdate" disabled>Update</button>
+        <button class="iosBtn" id="btnCancel" disabled>Cancel</button>
+      </div>
+
+      <p id="msg" class="muted" style="margin-top:10px;">Tip: Set temp range for smarter suggestions.</p>
+    </section>
+
+    <section class="glass">
+      <div class="sectionTitle">Saved Activities</div>
+
+      <div class="tablewrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Rules</th>
+              <th>Note</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">CRUD stored in localStorage • Suggested on Dashboard</footer>
+  </main>
+
+  <script src="./planner.js"></script>
+</body>
+</html>

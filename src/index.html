@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>WeatherApp</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body class="ios">
+  <header class="iosTop">
+    <div>
+      <div class="brand">WeatherApp</div>
+      <div class="subtitle">Forecast • Analytics • Decision Support</div>
+    </div>
+    <nav class="nav">
+      <a class="navlink active" href="./index.html">Dashboard</a>
+      <a class="navlink" href="./planner.html">Planner (CRUD)</a>
+    </nav>
+  </header>
+
+  <main class="container iosWrap">
+    <section class="glass searchCard">
+      <form id="searchForm" class="row" autocomplete="off">
+        <input id="q" class="input iosInput"
+          placeholder="Search city (e.g. Bahau)"
+          autocomplete="off"
+          autocapitalize="off"
+          autocorrect="off"
+          spellcheck="false"
+          name="q"
+        />
+        <button id="btn" class="btn iosBtn" type="submit">Search</button>
+        <button id="saveFav" class="btn iosBtn" type="button" title="Save as favourite">Save</button>
+      </form>
+
+      <div id="favBar" class="favBar"></div>
+      <p id="msg" class="muted"></p>
+    </section>
+    <!-- HERO -->
+    <section class="glass hero">
+      <div id="hero"></div>
+    </section>
+
+    <!-- HOURLY STRIP -->
+    <section class="glass">
+      <div class="sectionTitle">Hourly Forecast (Next 12 Hours)</div>
+      <div id="hourly" class="hourlyStrip"></div>
+    </section>
+
+    <!-- DAILY -->
+    <section class="glass">
+      <div class="sectionTitle">Daily Forecast</div>
+      <div id="forecast"></div>
+    </section>
+
+    <!-- DECISION SUPPORT -->
+    <section class="glass">
+      <div class="sectionTitle">Decision Support</div>
+      <div id="alerts"></div>
+      <div id="analytics"></div>
+    </section>
+
+    <footer class="footer muted">Data powered by WeatherAPI • Built with Electron</footer>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+</html>
