@@ -37,3 +37,23 @@ weather-app-electron/
 ├── package.json
 ├── package-lock.json
 └── README.md
+
+How to Run
+1. Clone the repository
+git clone https://github.com/ferryyirwan/weather-app-electron.git
+2. Navigate to the project directory
+cd weather-app-electron
+3. Install dependencies
+npm install
+4. Start the application
+npm start
+Project Purpose
+
+This project was developed as an academic project to demonstrate desktop application development, API integration, data analysis and decision-support functionality using Electron.
+
+Developer
+
+Ferry Irwan
+
+Diploma in Computer Science
+Kolej Profesional MARA Beranang (KPM)
