@@ -26,6 +26,21 @@ The application retrieves weather information from WeatherAPI and provides weath
 - WeatherAPI
 - LocalStorage
 
+## Screenshots
+
+### Dashboard
+
+![WeatherApp Dashboard](dashboard.png)
+
+### Decision Support
+
+![WeatherApp Decision Support](decision-support.png)
+
+### Activity Planner
+
+![WeatherApp Activity Planner](activity-planner.png)
+
+
 ## Application Structure
 
 ```text
